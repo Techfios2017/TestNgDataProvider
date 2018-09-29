@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestngSuite]">
+  <parameter name="Zip" value="11417"/>
+  <parameter name="country" value="iceland"/>
+  <parameter name="password" value="abc123"/>
+  <parameter name="Company" value="nokia"/>
+  <parameter name="Email" value="johnsmith@gmail.com"/>
+  <parameter name="address" value="250 irving rd"/>
+  <parameter name="phone" value="3474307205"/>
+  <parameter name="State" value="Texas"/>
+  <parameter name="City" value="dallas"/>
+  <parameter name="email" value="techfiosdemo@gmail.com"/>
+  <parameter name="Name" value="john smith"/>
+  <test name="login(failed)">
+    <parameter name="password" value="abc23"/>
+    <parameter name="email" value="techfiosdemo@gmail.com"/>
+    <classes>
+      <class name="test.LoginTest">
+        <methods>
+          <include name="login" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- test.LoginTest -->
+    </classes>
+  </test> <!-- login(failed) -->
+</suite> <!-- Failed suite [TestngSuite] -->
