@@ -14,27 +14,17 @@ public HomePage(WebDriver ldriver){
 	this.driver=ldriver;	
 }
 
-@FindBy(how=How.XPATH,using=".//*[contains(text(),'CRM')]")
-WebElement CRM;
+@FindBy(how=How.ID,using="email_create")
+WebElement EmailTextbox;
 
-@FindBy(how=How.XPATH,using=".//*[contains(text(),'Add Contact')]")
-WebElement AddContact;
-
-@FindBy(how=How.NAME,using="name")
-WebElement SearchCustomer;
+@FindBy(how=How.XPATH,using="//form[@id='create-account_form']//span[1]")
+WebElement CreateAnAccountButton;
 
 
-public void NavigatingToAddContact(){
+public void NavigatingToAccount(String email) {
+	EmailTextbox.sendKeys(email);
+	CreateAnAccountButton.click();
 	
-	CRM.click();
-	AddContact.click();	
-	
-}
-
-public void VerifyPageLogin(){
-	
-	CRM.isDisplayed(); // isDisplayed means if a element is visible or not.	
-	SearchCustomer.isDisplayed();	
 }
 
 }
